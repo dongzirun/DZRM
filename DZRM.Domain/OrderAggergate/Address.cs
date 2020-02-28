@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DZRM.Domain.OrderAggergateBoot
+namespace DZRM.Domain.OrderAggergate
 {
     public class Address : ValueObject
     {

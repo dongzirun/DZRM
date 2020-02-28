@@ -1,9 +1,10 @@
 ﻿using DZRM.Domain.Abstractions;
+using DZRM.Domain.Events;
 using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DZRM.Domain.OrderAggergateBoot
+namespace DZRM.Domain.OrderAggergate
 {
     public class Order : Entity<long>, IAggergateBoot
     {
@@ -25,7 +26,7 @@ namespace DZRM.Domain.OrderAggergateBoot
             this.Address = address;
             this.ItemCount = itemCount;
 
-            //this.AddDomainEvent(new OrderCreatedDomainEvent(this));
+            this.AddDomainEvent(new OrderCreatedDomainEvent(this));
         }
 
 

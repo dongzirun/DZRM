@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace DZRM.Infrastucture.Core
 {
-    public interface IRepository<TEntity> where TEntity : Entity, IAggergateBoot
+    public interface IRepository<TEntity> 
+        where TEntity : Entity, IAggergateBoot
     {
         IUnitOfWork UnitOfWork { get; }
         TEntity Add(TEntity entity);
@@ -18,7 +19,8 @@ namespace DZRM.Infrastucture.Core
         Task<bool> RemoveAsync(Entity entity);
     }
 
-    public interface IRepository<TEntity, TKey> : IRepository<TEntity> where TEntity : Entity<TKey>, IAggergateBoot
+    public interface IRepository<TEntity, TKey> : IRepository<TEntity> 
+        where TEntity : Entity<TKey>, IAggergateBoot
     {
         bool Delete(TKey id);
         Task<bool> DeleteAsync(TKey id, CancellationToken cancellationToken = default);

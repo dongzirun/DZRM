@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DZRM.Domain.UserAggergateBoot
+namespace DZRM.Domain.UserAggergate
 {
     public class User : Entity<long>, IAggergateBoot
     {

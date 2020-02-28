@@ -7,7 +7,9 @@ using System.Threading.Tasks;
 
 namespace DZRM.Infrastucture.Core
 {
-    public abstract class Repository<TEntity, TDbContext> : IRepository<TEntity> where TEntity : Entity, IAggergateBoot where TDbContext : EFContext
+    public abstract class Repository<TEntity, TDbContext> : IRepository<TEntity> 
+        where TEntity : Entity, IAggergateBoot 
+        where TDbContext : EFContext
     {
         protected virtual TDbContext DbContext { get; set; }
 
@@ -52,7 +54,9 @@ namespace DZRM.Infrastucture.Core
         }
     }
 
-    public abstract class Repository<TEntity, TKey, TDbContext> : Repository<TEntity, TDbContext> where TEntity : Entity<TKey>, IAggergateBoot where TDbContext : EFContext
+    public abstract class Repository<TEntity, TKey, TDbContext> : Repository<TEntity, TDbContext> 
+        where TEntity : Entity<TKey>, IAggergateBoot 
+        where TDbContext : EFContext
     {
         public Repository(TDbContext context) : base(context)
         {

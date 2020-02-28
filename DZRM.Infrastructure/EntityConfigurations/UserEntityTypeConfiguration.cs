@@ -1,4 +1,4 @@
-﻿using DZRM.Domain.UserAggergateBoot;
+﻿using DZRM.Domain.UserAggergate;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 

@@ -1,7 +1,9 @@
-﻿using DZRM.Domain.OrderAggergateBoot;
-using DZRM.Domain.UserAggergateBoot;
+﻿using DotNetCore.CAP;
+using DZRM.Domain.OrderAggergate;
+using DZRM.Domain.UserAggergate;
 using DZRM.Infrastructure.EntityConfigurations;
 using DZRM.Infrastucture.Core;
+using MediatR;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -11,7 +13,7 @@ namespace DZRM.Infrastructure
 {
     public class DomainContext : EFContext
     {
-        public DomainContext(DbContextOptions options) : base(options)
+        public DomainContext(DbContextOptions options, IMediator mediator, ICapPublisher capBus) : base(options, mediator, capBus)
         {
 
         }

@@ -8,7 +8,7 @@ namespace DZRM.Infrastucture.Core
 {
     public interface IUnitOfWork : IDisposable
     {
-        Task<int> SaveChangeAsync(CancellationToken cancellationToken = default);
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default);
         Task<bool> SaveEntitiesAsync(CancellationToken cancellationToken = default);
     }
 }

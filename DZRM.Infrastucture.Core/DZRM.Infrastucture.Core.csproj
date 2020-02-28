@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <PackageReference Include="Dotnetcore.cap" Version="3.0.2" />
+    <PackageReference Include="DotNetCore.CAP.MySql" Version="3.0.2" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.2" />
   </ItemGroup>
 

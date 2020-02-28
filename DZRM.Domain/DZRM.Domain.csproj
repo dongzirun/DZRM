@@ -5,10 +5,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Events\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\DZRM.Domain.Abstractions\DZRM.Domain.Abstractions.csproj" />
   </ItemGroup>
 
