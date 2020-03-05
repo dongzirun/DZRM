@@ -3,9 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace DZRM.Domain.Abstractions
+namespace DZRM.Domain
 {
-    public class IDomainEvent : INotification
+    public interface IDomainEvent : INotification
     {
     }
 }

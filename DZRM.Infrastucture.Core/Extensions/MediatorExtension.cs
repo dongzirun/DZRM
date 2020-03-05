@@ -22,7 +22,7 @@ namespace DZRM.Infrastucture.Core.Extensions
             domainEntities.ToList().ForEach(x => x.Entity.ClearDomainEvents());
 
             foreach (var item in domainEvents)
-                await mediator.Publish(domainEntities);
+                await mediator.Publish(item);
 
         }
     }
